@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy Application') {
             steps {
                 sh '''
-                ssh -i "~/.ssh/id_rsa" jenkins@34.142.72.48 << EOF
+                ssh -i "~/.ssh/id_rsa" jenkins@35.242.143.0 << EOF
                 docker stop api-docker
                 docker rm api-docker
                 docker rmi poojasdocker2023/api-docker:latest
